@@ -1,0 +1,22 @@
+.site-header{
+  max-height: 6rem;
+  padding: 1.5rem 2rem;
+  background-color: $secondary-color;
+}
+
+.brand{
+  display: inline-block;
+  font-family: $primary-font-family;
+  font-weight: 700;
+  color: $white;
+  letter-spacing: 3px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+
+  svg{
+    width: 3rem;
+    height: auto;
+    padding-right: .25rem;
+    vertical-align: middle;
+  }
+}

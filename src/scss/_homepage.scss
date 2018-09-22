@@ -1,0 +1,15 @@
+.site-description{
+  font-size: 1.675rem;
+}
+
+.site-meta{
+  font-size: .75rem;
+}
+
+.site-actions{
+  @include unstyled-list();
+
+  li{
+    margin-bottom: 1rem;
+  }
+}

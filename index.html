@@ -1,0 +1,37 @@
+---
+layout: base
+---
+
+<section class="page homepage">
+  <section class="page-intro">
+    <button class="collapse-section"></button>
+    <p class="site-description">Explore a living archive of Milwaukee’s houses of worship. </p>
+    <hr>
+    <ul class="site-actions">
+      <li>Find a location on the map.</li>
+      <li>Trace a building’s history over time.</li>
+      <li>Example</li>
+    </ul>
+    <hr>
+    <div class="site-meta">
+      <p>This project was generously funded by the Wisconsin Humanities Council, hosted by the University of Wisconsin, Milwaukkee’s library, and built, intially, the students in CLASS.</p>
+      <p>Have an idea for the site? Please email us at example@example.com</p>
+    </div>
+  </section>
+
+  <section class="page-content">
+    <iframe src="http://maps.stamen.com/terrain/embed#12/43.0109/-87.9737"></iframe>
+  </div>
+
+</section>
+
+<script>
+  (function(){
+    var collapse = document.querySelector('.collapse-section');
+    var section = document.querySelector('.page-intro');
+    collapse.addEventListener('click', function(){
+      section.classList.toggle('section-collapsed');
+      this.classList.toggle('collapsed');
+    })
+  })();
+</script>
