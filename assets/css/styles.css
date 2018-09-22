@@ -33,9 +33,9 @@
     letter-spacing: -.5px; }
 
 .collapse-section {
-  position: fixed;
-  top: 55%;
-  left: 21.65%;
+  position: absolute;
+  top: 50%;
+  right: 0;
   width: 2rem;
   height: 2rem;
   border: 0;
@@ -52,7 +52,7 @@
   .collapse-section:hover {
     transform: scale(1.25); }
   .collapse-section.collapsed {
-    top: 55%;
+    top: 45%;
     left: 0; }
     .collapse-section.collapsed:after {
       content: "\25b6"; }
@@ -75,13 +75,13 @@ body {
   margin: 0 auto;
   padding: 0;
   background: #384543;
-  font: 16px/1.6 "Montserrat", sans-serif;
+  font: 400 16px/1.6 "Montserrat", sans-serif;
   overflow: hidden; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
-  font-weight: 400;
-  line-height: 1.2; }
+  font-weight: 500;
+  line-height: 1.3; }
 
 h2, h3, h4, h5, h6 {
   color: #384543; }
@@ -104,7 +104,7 @@ a {
 
 .content {
   width: 100%;
-  \height: calc(100% - 5rem); }
+  height: calc(100% - 5rem); }
 
 .container {
   height: 100%; }
@@ -114,14 +114,19 @@ a {
   display: flex;
   width: 100%;
   height: 100%; }
+  .page h1 {
+    margin-bottom: .5rem;
+    font-size: 1.75rem; }
 
 .page-intro {
   position: relative;
-  width: 30%;
+  width: 40%;
   padding: 2rem;
   background-color: #384543;
   color: #fff;
   overflow-x: auto; }
+  .page-intro p {
+    max-width: 95%; }
   .page-intro a {
     color: #fff; }
   .page-intro hr {
@@ -133,11 +138,12 @@ a {
 .page-content {
   width: 100%;
   height: 100%;
-  background-color: #fff; }
+  background-color: #fff;
+  overflow-x: auto; }
 
 .site-header {
-  max-height: 6rem;
-  padding: 1.5rem 2rem;
+  max-height: 5rem;
+  padding: 1.125rem 2rem;
   background-color: #6E8787; }
 
 .brand {
@@ -146,7 +152,7 @@ a {
   font-weight: 700;
   color: #fff;
   letter-spacing: 3px;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   text-transform: uppercase; }
   .brand svg {
     width: 3rem;
@@ -198,8 +204,9 @@ a {
   .nav a {
     display: block;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-family: "Montserrat", sans-serif;
+    font-size: .875rem;
     color: #fff; }
     @media screen and (min-width: 850px) {
       .nav a {
@@ -234,14 +241,37 @@ a {
   display: inline-block;
   background-color: transparent;
   border: 0;
-  text-align: center; }
+  text-align: center;
+  vertical-align: middle; }
   .search svg {
     width: auto;
     height: 1rem;
     fill: #fff; }
 
+.breadcrumbs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin: 0 0 2rem; }
+  .breadcrumbs li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: .75rem;
+    letter-spacing: 1px; }
+    .breadcrumbs li:after {
+      content: "/";
+      display: inline-block;
+      margin: 0 .5rem 0 .75rem; }
+    .breadcrumbs li:last-child:after {
+      content: "";
+      margin: 0; }
+    .breadcrumbs li a {
+      text-decoration: none; }
+
 .site-description {
-  font-size: 1.675rem; }
+  margin-top: 2rem;
+  font-size: 1.75rem;
+  line-height: 1.3; }
 
 .site-meta {
   font-size: .75rem; }
@@ -252,6 +282,73 @@ a {
   padding: 0; }
   .site-actions li {
     margin-bottom: 1rem; }
+
+.item-asset {
+  width: 60%;
+  max-width: 48rem;
+  margin: 2rem auto; }
+  .item-asset img {
+    max-width: 100%;
+    height: auto; }
+
+.item-description {
+  margin-top: 2rem; }
+
+.item-collection-statement {
+  font-style: italic; }
+
+.item-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2rem; }
+  .item-tags .tag {
+    display: inline-block;
+    margin-right: .5rem;
+    margin-bottom: 1rem;
+    padding: .5rem 1rem;
+    border-radius: 3rem;
+    border: 2px solid #fff;
+    font-size: .8125rem; }
+
+.item-metadata {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .item-metadata li {
+    margin-bottom: .5rem;
+    font-size: .875rem; }
+
+.collection-map {
+  height: 18rem; }
+
+.collection-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 48rem;
+  margin: 2rem auto 4rem; }
+
+.collection-item {
+  width: calc(25% - 2rem);
+  margin: 0 1rem 2rem; }
+  .collection-item a {
+    display: block; }
+
+.collection-item-asset {
+  margin: 0; }
+  .collection-item-asset img {
+    max-width: 100%;
+    height: auto; }
+  .collection-item-asset figcaption {
+    padding: 0 .25rem;
+    font-size: .75rem; }
+
+.collection-creators {
+  font-size: .875rem; }
 
 .content iframe {
   width: 100%;

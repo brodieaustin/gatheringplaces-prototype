@@ -3,8 +3,8 @@ layout: base
 ---
 
 <section class="page homepage">
-  <section class="page-intro">
-    <button class="collapse-section"></button>
+  <section class="page-intro" id="page-intro" aria-hidden="false">
+    <button class="collapse-section" aria-expanded="true" aria-controls="page-intro"></button>
     <p class="site-description">Explore a living archive of Milwaukee’s houses of worship. </p>
     <hr>
     <ul class="site-actions">
@@ -21,17 +21,6 @@ layout: base
 
   <section class="page-content">
     <iframe src="http://maps.stamen.com/terrain/embed#12/43.0109/-87.9737"></iframe>
-  </div>
+  </section>
 
 </section>
-
-<script>
-  (function(){
-    var collapse = document.querySelector('.collapse-section');
-    var section = document.querySelector('.page-intro');
-    collapse.addEventListener('click', function(){
-      section.classList.toggle('section-collapsed');
-      this.classList.toggle('collapsed');
-    })
-  })();
-</script>

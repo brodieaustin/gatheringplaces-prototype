@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Gathering Places</title>
   <meta name="viewport" content="width=device-width">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,700" rel="stylesheet">
   <link href="{{ site.baseurl }}/assets/css/styles.css" rel="stylesheet">
 </head>
 <body>
@@ -22,6 +22,18 @@
   {% include footer.html %}
 
   <!--scripts-->
-
+  <script>
+    (function(){
+      var collapse = document.querySelector('.collapse-section');
+      var section = document.querySelector('.page-intro');
+      var state = section.getAttribute('aria-hidden') === 'true' ? false : true;
+      collapse.addEventListener('click', function(){
+        section.classList.toggle('section-collapsed');
+        section.getAttribute('aria-hidden', state);
+        this.classList.toggle('collapsed');
+        this.getAttribute('aria-expanded', !state);
+      })
+    })();
+  </script>
 </body>
 </html>
