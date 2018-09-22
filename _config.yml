@@ -1,2 +1,2 @@
-baseurl: ""
+baseurl: "/gatheringplaces-prototype"
 exclude: ['node_modules/', 'gulpfile.js', 'package.json', 'src/']
